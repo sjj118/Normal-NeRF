@@ -1,0 +1,19 @@
+[project]
+name = "Normal-NeRF"
+version = "0.1.0"
+
+dependencies = [
+    "nerfstudio"
+]
+
+[tool.setuptools.packages.find]
+include = ["normalnerf*"]
+
+[project.entry-points.'nerfstudio.method_configs']
+normalnerf = 'normalnerf.config:normalnerf'
+
+[tool.ruff]
+line-length = 210
+
+[tool.ruff.format]
+quote-style = "single"
